@@ -11,11 +11,12 @@ contract ThingFactory {
          public
          returns(address)
     {
-        Thing newThing = (new Thing( _name, _surname, _degree, _date ));
-        registeredThings[msg.sender].push(address(newThing));
-        return address(newThing);
+        Thing newThing = (new Thing( _name, _surname, _degree, _date )); //visualstudio terminal said: "identifier not funnd or not unique"
+        registeredThings[msg.sender].push(address(newThing));           
+        return address(newThing);                                        
     }
 }
 
 
 
+// line 14 can i write this line?: Thing newThing = new Thing();
